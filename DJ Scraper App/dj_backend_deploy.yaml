@@ -1,0 +1,25 @@
+# Deployment Config for Railway (you can also adapt for Render)
+# Easy deployment for your Flask backend
+
+# 1️⃣ Railway Project Root
+# Place this file in your project root (same directory as Dj Backend Api and Dj Scraper)
+
+# 2️⃣ Requirements file (for Python dependencies)
+# Create requirements.txt with:
+#
+# Flask
+# beautifulsoup4
+# requests
+
+# 3️⃣ Railway service definition
+services:
+  - name: dj-backend-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python Dj_Backend_Api.py
+
+# 4️⃣ Railway auto-detects the exposed port for Flask (default 5000)
+# Make sure to allow Railway to detect Flask
+
+# 5️⃣ Update your React Native app:
+# Replace API_URL = "http://localhost:5000/api/djs" with your Railway assigned domain
