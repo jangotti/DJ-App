@@ -1,0 +1,19 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.env
+*.sqlite3
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# VSCode
+.vscode/
+
+# OS Files
+Thumbs.db
+ehthumbs.db
